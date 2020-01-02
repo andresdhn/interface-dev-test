@@ -18,6 +18,10 @@ const path = {
     },
 }
 
+function js() {
+    return src(path.js.src).pipe(dest(path.js.dst))
+}
+
 function css() {
     return src(path.css.src)
         .pipe(sass(sassOptions).on('error', sass.logError))
@@ -30,11 +34,12 @@ function html() {
 }
 
 function watchers() {
+    watch(path.js.src, js)
     watch(path.css.src, css)
     watch(path.html.src, html)
 }
 
-const build = series(parallel(css, html), watchers)
+const build = series(parallel(js, css, html), watchers)
 
 exports.css = css
 exports.html = html
