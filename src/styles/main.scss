@@ -2,9 +2,13 @@
 //  Author: Andres Hernandez Jan 2020
 //  main.css
 
+//Globals
 @import 'settings';
 @import 'normalize';
 @import 'base';
 @import 'typography';
 @import 'grid';
 @import 'spacers';
+
+//custom
+@import 'articles';
