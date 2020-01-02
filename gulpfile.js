@@ -16,6 +16,10 @@ const path = {
         src: './src/html/*.html',
         dst: './build/',
     },
+    imgs: {
+        src: './src/images/*.{jpg,png,gif}',
+        dst: './build/images/',
+    },
 }
 
 function js() {
@@ -33,13 +37,17 @@ function html() {
     return src(path.html.src).pipe(dest(path.html.dst))
 }
 
+function images() {
+    return src(path.imgs.src).pipe(dest(path.imgs.dst))
+}
+
 function watchers() {
     watch(path.js.src, js)
     watch(path.css.src, css)
     watch(path.html.src, html)
 }
 
-const build = series(parallel(js, css, html), watchers)
+const build = series(parallel(js, css, html, images), watchers)
 
 exports.css = css
 exports.html = html

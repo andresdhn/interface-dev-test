@@ -1,6 +1,6 @@
 // Main.js
 let anchor = document.querySelectorAll('a')
-let popup = document.querySelectorAll('.popup')
+let popup = document.querySelectorAll('.modal-toggle')
 
 // Bind events
 for (let i = 0; i < anchor.length; i++) {
@@ -17,6 +17,7 @@ for (let i = 0; i < popup.length; i++) {
 
 // handle Click
 function handleClick(e) {
+    e.preventdefault()
     console.log(e.target)
 }
 
