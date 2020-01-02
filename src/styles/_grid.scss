@@ -1,21 +1,20 @@
 // Grid
 .grid {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: space-between;
 
-    @media screen and (min-width: $sm) {
-        display: flex;
-        align-items: top;
-        justify-content: space-between;
-
-        &--cols-3 {
-            .grid__cell {
-                width: 32%;
-            }
-        }
-    }
-
-    // Vertical Rythym
     .grid__cell {
-        margin-bottom: 3rem;
+        width: 100%;
+        margin-bottom: 3em;
+
+        @media screen and (min-width: $sm) {
+            width: 48%;
+        }
+
+        @media screen and (min-width: $md) {
+            width: 32%;
+        }
     }
 }
