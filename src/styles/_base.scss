@@ -1,10 +1,12 @@
 // Base styles
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap');
+
 html {
     background-color: $color-black;
 }
 
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Roboto', Helvetica, sans-serif;
     font-weight: 100;
     font-size: calc(14px + 0.5vh);
     line-height: 1.7;
@@ -17,9 +19,12 @@ body {
 img {
     max-width: 100%;
 }
+main {
+    padding-top: 5em;
+}
 
 section {
-    padding: 5rem 0;
+    padding: 5em 0;
 }
 
 .container {
