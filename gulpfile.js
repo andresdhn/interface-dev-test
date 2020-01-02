@@ -25,12 +25,18 @@ function css() {
         .pipe(dest(path.css.dst))
 }
 
-function watchers() {
-    watch(path.css.src, css)
+function html() {
+    return src(path.html.src).pipe(dest(path.html.dst))
 }
 
-const build = series(css, watchers)
+function watchers() {
+    watch(path.css.src, css)
+    watch(path.html.src, html)
+}
+
+const build = series(parallel(css, html), watchers)
 
 exports.css = css
+exports.html = html
 exports.watch = watchers
 exports.default = build
