@@ -1,8 +1,7 @@
 // modal
-
 #modal {
     position: fixed;
-    display: none;
+    visibility: hidden;
     top: 0;
     left: 0;
     width: 100%;
@@ -12,7 +11,7 @@
     background-color: rgba($color-black, 0.8);
 
     &.open {
-        display: block;
+        visibility: visible;
 
         .modal__dialog {
             top: 10%;
@@ -21,8 +20,8 @@
 
     .modal__close {
         position: absolute;
-        top: 5%;
-        right: 7%;
+        top: 20px;
+        right: 20px;
         width: 60px;
         height: 60px;
         z-index: 99;
@@ -34,30 +33,37 @@
         line-height: 1;
     }
 
+    // Provides animation a relative element
     .modal__content {
         position: relative;
         width: 100%;
         height: 100%;
     }
 
+    // animates slide in from top
     .modal__dialog {
         position: absolute;
-        top: -100%;
+        top: -200%;
         left: 50%;
         transform: translateX(-50%);
-
         overflow: hidden;
 
+        @media screen and (max-width: $sm) {
+            width: 80%;
+        }
+
         transition: top 0.5s ease;
-        transition-delay: 0.5s;
+        transition-delay: 0.2s;
 
         img {
             position: relative;
             top: 20%;
+            max-width: 384px; // fixes blurr w/ retina sizing due to lack of hi-res images
         }
     }
 }
 
+// Modal related buttons
 .modal-toggle {
     cursor: pointer;
 }
