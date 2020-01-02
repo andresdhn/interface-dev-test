@@ -17,17 +17,22 @@ for (let i = 0; i < popup.length; i++) {
 
 // handle Click
 function handleClick(e) {
+    //console log all anchor clicks + prevent default refresh
     e.preventdefault()
     console.log(e.target)
 }
 
 // Toggle Popup images
 function togglePopup(src) {
+    // toggles Modal class open
     let modal = document.getElementById('modal')
     modal.classList.toggle('open')
 
+    // loads dynamically preloaded image src for DRYness
     if (src) {
         let img = modal.querySelector('img')
         img.setAttribute('src', src)
     }
 }
+
+//TODO: Prevent function exposure if requried
