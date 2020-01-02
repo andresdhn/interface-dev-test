@@ -11,19 +11,19 @@ for (let i = 0; i < anchor.length; i++) {
 
 for (let i = 0; i < popup.length; i++) {
     popup[i].addEventListener('click', function(event) {
-        togglePopup(event.target.getAttribute('src'))
+        toggleModal(event.target.getAttribute('src'))
     })
 }
 
 // handle Click
 function handleClick(e) {
-    //console log all anchor clicks + prevent default refresh
-    e.preventdefault()
+    //Prevents refresh
+    e.preventDefault()
     console.log(e.target)
 }
 
-// Toggle Popup images
-function togglePopup(src) {
+// Toggle Modal
+function toggleModal(src) {
     // toggles Modal class open
     let modal = document.getElementById('modal')
     modal.classList.toggle('open')

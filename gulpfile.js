@@ -1,6 +1,8 @@
 const { src, dest, parallel, series, watch } = require('gulp')
 const autoprefixer = require('gulp-autoprefixer')
 const sass = require('gulp-sass')
+const uglify = require('gulp-uglify')
+let babel = require('gulp-babel')
 
 const sassOptions = { outputStyle: 'compressed' }
 const path = {
@@ -23,7 +25,14 @@ const path = {
 }
 
 function js() {
-    return src(path.js.src).pipe(dest(path.js.dst))
+    return src(path.js.src)
+        .pipe(
+            babel({
+                presets: ['@babel/preset-env'],
+            })
+        )
+        .pipe(uglify())
+        .pipe(dest(path.js.dst))
 }
 
 function css() {
