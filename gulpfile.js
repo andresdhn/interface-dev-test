@@ -2,7 +2,7 @@ const { src, dest, parallel, series, watch } = require('gulp')
 const autoprefixer = require('gulp-autoprefixer')
 const sass = require('gulp-sass')
 const uglify = require('gulp-uglify')
-let babel = require('gulp-babel')
+const babel = require('gulp-babel')
 
 const sassOptions = { outputStyle: 'compressed' }
 const path = {
