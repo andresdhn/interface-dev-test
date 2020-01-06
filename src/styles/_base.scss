@@ -8,7 +8,7 @@ html {
 body {
     font-family: 'Roboto', Helvetica, sans-serif;
     font-weight: 100;
-    font-size: calc(14px + 0.6vh);
+    font-size: calc(14px + 0.5vh);
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -31,6 +31,6 @@ section {
 .container {
     position: relative;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1280px;
     padding: 0 5%;
 }
