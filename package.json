@@ -8,7 +8,9 @@
   },
   "author": "Andres Hernandez <hernandez.andres.d@gmail.com",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",

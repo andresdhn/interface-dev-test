@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>Andres Hernandez | Interface Development Test</title>
         <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
         <link rel="stylesheet" href="css/main.css" />
         <meta name="theme-color" content="#fafafa" />
@@ -21,30 +21,35 @@
         <main>
             <div class="container">
                 <section id="body-needs">
-                    <div class="grid">
+                    <div class="row">
                         <!-- Left -->
-                        <div class="grid__cell">
-                            <img
-                                class="modal-toggle"
-                                src="./images/portrait.png"
-                                alt="man-and-child"
-                            />
+                        <div class="col-md-8">
+                            <div class="row margin--BX1">
+                                <div class="col">
+                                    <img
+                                        class="modal-toggle"
+                                        src="./images/portrait.png"
+                                        alt="man-and-child"
+                                    />
+                                </div>
+
+                                <div class="col">
+                                    <img
+                                        class="modal-toggle margin--BX1"
+                                        src="./images/landscape.png"
+                                        alt="bowl-of-fruits"
+                                    />
+                                    <img
+                                        class="modal-toggle"
+                                        src="./images/landscape2.png"
+                                        alt="asparagous"
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <!-- Middle -->
-                        <div class="grid__cell">
-                            <img
-                                class="modal-toggle margin--BX1"
-                                src="./images/landscape.png"
-                                alt="bowl-of-fruits"
-                            />
-                            <img
-                                class="modal-toggle"
-                                src="./images/landscape2.png"
-                                alt="asparagous"
-                            />
-                        </div>
+
                         <!-- Right -->
-                        <div class="grid__cell grid__cell--full-sm">
+                        <div class="col-md-4">
                             <h3 class="underline">
                                 Answer your body's needs
                             </h3>
@@ -75,9 +80,9 @@
                 </section>
                 <section id="aeg-latest">
                     <h1 class="text--center">All the latest from AEG</h1>
-                    <div class="grid">
+                    <div class="row">
                         <!-- Left -->
-                        <div class="grid__cell">
+                        <div class="col-md">
                             <article>
                                 <a href="#" class="article__thumb">
                                     <img
@@ -106,7 +111,7 @@
                         </div>
 
                         <!-- Middle -->
-                        <div class="grid__cell">
+                        <div class="col-md">
                             <article>
                                 <a href="#" class="article__thumb">
                                     <img
@@ -137,7 +142,7 @@
                         </div>
 
                         <!-- Right -->
-                        <div class="grid__cell">
+                        <div class="col-md">
                             <article>
                                 <a href="#" class="article__thumb">
                                     <img
