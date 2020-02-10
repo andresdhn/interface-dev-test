@@ -8,24 +8,11 @@ import '../styles/main.scss'
 export default class home extends Component {
     constructor() {
         super()
+        this.toggleModal = this.toggleModal.bind(this)
         this.state = {
             modalVisible: false,
             modalImge: '',
         }
-    }
-
-    componentDidMount() {
-        // Bind anchor clicks
-        let anchor = document.querySelectorAll('a')
-        for (let i = 0; i < anchor.length; i++) {
-            anchor[i].addEventListener('click', e => this.handleClick(e))
-        }
-    }
-
-    handleClick = e => {
-        //Prevents refresh
-        e.preventDefault()
-        console.log(e.target)
     }
 
     toggleModal = e => {
@@ -53,7 +40,7 @@ export default class home extends Component {
                                     className="modal-toggle"
                                     src="./portrait.png"
                                     alt="man-and-child"
-                                    onClick={e => this.toggleModal(e)}
+                                    onClick={this.toggleModal}
                                 />
                             </div>
 
@@ -62,13 +49,13 @@ export default class home extends Component {
                                     className="modal-toggle margin--BX1"
                                     src="./landscape.png"
                                     alt="bowl-of-fruits"
-                                    onClick={e => this.toggleModal(e)}
+                                    onClick={this.toggleModal}
                                 />
                                 <img
                                     className="modal-toggle"
                                     src="./landscape2.png"
                                     alt="asparagous"
-                                    onClick={e => this.toggleModal(e)}
+                                    onClick={this.toggleModal}
                                 />
                             </div>
 
@@ -147,9 +134,9 @@ export default class home extends Component {
                                     </p>
                                     <p>
                                         This excusive cookbook gives you all the
-                                        know-how you need. We've designed it to
-                                        make sure you get the most out of our
-                                        products - and the best out of your
+                                        know-how you need. We&quot;ve designed
+                                        it to make sure you get the most out of
+                                        our products - and the best out of your
                                         food.
                                     </p>
                                 </Article>
@@ -157,7 +144,6 @@ export default class home extends Component {
                         </div>
                     </section>
                 </div>
-                // Modal window
                 <Modal
                     visible={this.state.modalVisible}
                     image={this.state.modalImge}
